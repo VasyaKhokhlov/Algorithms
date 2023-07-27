@@ -35,7 +35,7 @@ public class Main {
       this.phone = phone;
     }
 
-    @Override
+    
     public String toString() {
       return "Contact{" +
           "id=" + id +
@@ -46,27 +46,23 @@ public class Main {
   }
 
 
-  /**
-   * Класс списка
-   *
-   * @param <T>
-   */
+  /**Класс списка*/
   public static class SingleLinkList<T> implements Iterable {
 
     ListItem<T> head;
     ListItem<T> tail;
 
-    @Override
+    
     public Iterator iterator() {
       return new Iterator<T>() {
         ListItem<T> current = head;
 
-        @Override
+        
         public boolean hasNext() {
           return current != null;
         }
 
-        @Override
+        
         public T next() {
           T data = current.data;
           current = current.next;
@@ -76,9 +72,7 @@ public class Main {
     }
 
     /**
-     * Класс отдельного элемента
-     *
-     * @param <T>
+     Класс отдельного элемента
      */
     private static class ListItem<T> {
 
@@ -86,7 +80,7 @@ public class Main {
       ListItem<T> next;
     }
 
-    //Голова пустая
+    
     public boolean isEmpty() {
       return head == null;
     }
@@ -98,11 +92,11 @@ public class Main {
       ListItem<T> newItem = new ListItem<>();
       newItem.data = item;
 
-      //Если, голова и хвост пустая
+      
       if (isEmpty()) {
         head = newItem;
         tail = newItem;
-      } else { //Если, не пустая то передаём элементу адрес и ставим в хвост
+      } else { 
         tail.next = newItem;
         tail = newItem;
       }

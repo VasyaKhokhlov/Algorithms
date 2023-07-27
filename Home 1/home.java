@@ -2,7 +2,7 @@
  * Сортировка кучей, пирамидальная сортировка
  */
 
- public class HeapSort {
+ public class home {
 
     public static void main(String[] args) {
       int[] arr = {1234, 4, 7, 2, 1, -3, 0, 567, 45, 90, 34,2, 234};
